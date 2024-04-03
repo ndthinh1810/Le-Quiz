@@ -1,9 +1,6 @@
 //
 //  FirstViewController.swift
-//  KnowledgeTest
-//
-//  Created by Jagtar Singh on 2018-07-27.
-//  Copyright © 2018 Jagtar Singh. All rights reserved.
+//  Le'Quiz
 //
 
 import UIKit
@@ -16,16 +13,34 @@ extension UIButton {
     }
 }
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var enterName: UITextField!
     @IBOutlet weak var btnStart: UIButton!
     @IBAction func showMainView(_ sender: Any) {
-        name = enterName.text!
-        enterName.resignFirstResponder()
+        if let enteredName = enterName.text, enteredName.isEmpty == false {
+            name = enteredName
+            enterName.resignFirstResponder()
+        }
     }
     
     override func viewDidLoad() {
         btnStart.display()
         enterName.layer.cornerRadius = 20
+        self.enterName.delegate = self
+        self.btnStart.isEnabled = false
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func viewTapped() {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text?.isEmpty == false {
+            self.btnStart.isEnabled = true
+        } else {
+            self.btnStart.isEnabled = false
+        }
     }
 }

@@ -1,9 +1,6 @@
 //
 //  AppDelegate.swift
-//  KnowledgeTest
-//
-//  Created by Jagtar Singh on 2018-07-19.
-//  Copyright © 2018 Jagtar Singh. All rights reserved.
+//  Le'Quiz
 //
 
 import UIKit

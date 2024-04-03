@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171096DC2BBBA741007B1110 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171096DB2BBBA741007B1110 /* QuizQuestion.swift */; };
 		63720A9321015C9800BE915D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63720A9221015C9800BE915D /* AppDelegate.swift */; };
 		63720A9521015C9800BE915D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63720A9421015C9800BE915D /* ViewController.swift */; };
 		63720A9821015C9800BE915D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63720A9621015C9800BE915D /* Main.storyboard */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63720A8F21015C9800BE915D /* KnowledgeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowledgeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		171096DB2BBBA741007B1110 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		63720A8F21015C9800BE915D /* Le'Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le'Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63720A9221015C9800BE915D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63720A9421015C9800BE915D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63720A9721015C9800BE915D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		63720A9021015C9800BE915D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63720A8F21015C9800BE915D /* KnowledgeTest.app */,
+				63720A8F21015C9800BE915D /* Le'Quiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +68,7 @@
 				63720A9921015C9E00BE915D /* Assets.xcassets */,
 				63720A9B21015C9E00BE915D /* LaunchScreen.storyboard */,
 				63720A9E21015C9E00BE915D /* Info.plist */,
+				171096DB2BBBA741007B1110 /* QuizQuestion.swift */,
 			);
 			path = KnowledgeTest;
 			sourceTree = "<group>";
@@ -73,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63720A8E21015C9800BE915D /* KnowledgeTest */ = {
+		63720A8E21015C9800BE915D /* Le'Quiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63720AA121015C9E00BE915D /* Build configuration list for PBXNativeTarget "KnowledgeTest" */;
+			buildConfigurationList = 63720AA121015C9E00BE915D /* Build configuration list for PBXNativeTarget "Le'Quiz" */;
 			buildPhases = (
 				63720A8B21015C9800BE915D /* Sources */,
 				63720A8C21015C9800BE915D /* Frameworks */,
@@ -85,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = KnowledgeTest;
+			name = "Le'Quiz";
 			productName = KnowledgeTest;
-			productReference = 63720A8F21015C9800BE915D /* KnowledgeTest.app */;
+			productReference = 63720A8F21015C9800BE915D /* Le'Quiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63720A8E21015C9800BE915D /* KnowledgeTest */,
+				63720A8E21015C9800BE915D /* Le'Quiz */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +148,7 @@
 				637D02E2210AE15A001BACBD /* LastViewController.swift in Sources */,
 				63720A9321015C9800BE915D /* AppDelegate.swift in Sources */,
 				637D02E0210AE147001BACBD /* FirstViewController.swift in Sources */,
+				171096DC2BBBA741007B1110 /* QuizQuestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +294,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KnowledgeTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Le'Quiz";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jsk.KnowledgeTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dlv.lequiz;
+				PRODUCT_NAME = "Le'Quiz";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,12 +312,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KnowledgeTest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Le'Quiz";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jsk.KnowledgeTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dlv.lequiz;
+				PRODUCT_NAME = "Le'Quiz";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -330,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63720AA121015C9E00BE915D /* Build configuration list for PBXNativeTarget "KnowledgeTest" */ = {
+		63720AA121015C9E00BE915D /* Build configuration list for PBXNativeTarget "Le'Quiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63720AA221015C9E00BE915D /* Debug */,

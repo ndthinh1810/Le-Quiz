@@ -1,9 +1,6 @@
 //
 //  LastViewController.swift
-//  KnowledgeTest
-//
-//  Created by Jagtar Singh on 2018-07-27.
-//  Copyright © 2018 Jagtar Singh. All rights reserved.
+//  Le'Quiz
 //
 
 import UIKit
@@ -22,27 +19,27 @@ class LastViewController: UIViewController {
          super.viewDidLoad()
         tryAgain.display()
         tryAgain.isHidden = true
-        if (count <= 2)
+        if (count <= 5)
         {
-            message = "Please Try Again"
+            message = "You need to try harder"
             tryAgain.isHidden = false
         }
-        else if (count == 3)
+        else if (count <= 7)
         {
             message = "Good Job!"
         }
-        else if (count == 4)
+        else if (count <= 9)
         {
             message = "Excellent Work!"
         }
-        else if (count == 5)
+        else if (count == 10)
         {
-            message = "Yor are a genius!"
+            message = "You are a genius!"
         }
-        upperLabel.text = "\(name) your Socre is"
+        upperLabel.text = "\(name), your score is"
         
         lowerLabel.text = """
-                          \(String(count))/5
+                          \(String(count))/10
                           \(message)
                           """
         // Do any additional setup after loading the view.
@@ -53,15 +50,8 @@ class LastViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func reDo(sender: UIButton) {
+        self.dismiss(animated: true)
+        count = 0
     }
-    */
-
 }
