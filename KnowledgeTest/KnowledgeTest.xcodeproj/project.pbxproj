@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		171096DC2BBBA741007B1110 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171096DB2BBBA741007B1110 /* QuizQuestion.swift */; };
+		17BB88622BC3A72F00CAA43F /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BB885E2BC3A72F00CAA43F /* CategoryCell.xib */; };
+		17BB88632BC3A72F00CAA43F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB885F2BC3A72F00CAA43F /* CategoryCollectionViewCell.swift */; };
+		17BB88642BC3A72F00CAA43F /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB88602BC3A72F00CAA43F /* CategoryCell.swift */; };
+		17BB88652BC3A72F00CAA43F /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BB88612BC3A72F00CAA43F /* CategoryCollectionViewCell.xib */; };
 		63720A9321015C9800BE915D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63720A9221015C9800BE915D /* AppDelegate.swift */; };
 		63720A9521015C9800BE915D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63720A9421015C9800BE915D /* ViewController.swift */; };
 		63720A9821015C9800BE915D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63720A9621015C9800BE915D /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		171096DB2BBBA741007B1110 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		17BB885E2BC3A72F00CAA43F /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		17BB885F2BC3A72F00CAA43F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		17BB88602BC3A72F00CAA43F /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		17BB88612BC3A72F00CAA43F /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		63720A8F21015C9800BE915D /* Le'Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le'Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63720A9221015C9800BE915D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63720A9421015C9800BE915D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,10 @@
 		63720A9121015C9800BE915D /* KnowledgeTest */ = {
 			isa = PBXGroup;
 			children = (
+				17BB88602BC3A72F00CAA43F /* CategoryCell.swift */,
+				17BB885E2BC3A72F00CAA43F /* CategoryCell.xib */,
+				17BB885F2BC3A72F00CAA43F /* CategoryCollectionViewCell.swift */,
+				17BB88612BC3A72F00CAA43F /* CategoryCollectionViewCell.xib */,
 				637D02DF210AE146001BACBD /* FirstViewController.swift */,
 				637D02E1210AE15A001BACBD /* LastViewController.swift */,
 				63720A9221015C9800BE915D /* AppDelegate.swift */,
@@ -132,8 +144,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63720A9D21015C9E00BE915D /* LaunchScreen.storyboard in Resources */,
+				17BB88652BC3A72F00CAA43F /* CategoryCollectionViewCell.xib in Resources */,
 				63720A9A21015C9E00BE915D /* Assets.xcassets in Resources */,
 				63720A9821015C9800BE915D /* Main.storyboard in Resources */,
+				17BB88622BC3A72F00CAA43F /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +161,9 @@
 				63720A9521015C9800BE915D /* ViewController.swift in Sources */,
 				637D02E2210AE15A001BACBD /* LastViewController.swift in Sources */,
 				63720A9321015C9800BE915D /* AppDelegate.swift in Sources */,
+				17BB88642BC3A72F00CAA43F /* CategoryCell.swift in Sources */,
 				637D02E0210AE147001BACBD /* FirstViewController.swift in Sources */,
+				17BB88632BC3A72F00CAA43F /* CategoryCollectionViewCell.swift in Sources */,
 				171096DC2BBBA741007B1110 /* QuizQuestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

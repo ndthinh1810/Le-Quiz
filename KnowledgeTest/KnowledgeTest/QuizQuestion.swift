@@ -6,7 +6,7 @@
 import Foundation
 
 class QuizAPI {
-    let apiUrl = "https://opentdb.com/api.php?amount=10&category=17"
+    let apiUrl = "https://opentdb.com/api.php?amount=10&category=17&difficulty=\(currentMode.name)"
 
     func fetchQuizQuestion(completion: @escaping (Result<QuizAPIResponse, Error>) -> Void) {
         guard let url = URL(string: apiUrl) else {

@@ -83,6 +83,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.nextQuestion()
     }
     
+    func saveRecordToUserDefaults(record: Record, forKey key: String) {
+        var currentData = RecordManager.shared.getData(key: key)
+        currentData.removeAll(where: { $0.name == record.name })
+        currentData.append(record)
+        RecordManager.shared.saveData(key: key, data: currentData)
+    }
+    
     @IBAction func dismiss(_ sender: UIButton) {
         self.dismiss(animated: true)
         count = 0
@@ -95,6 +102,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             finImage.isHidden = false
             self.answerTableView.isHidden = true
             quesLabel.text = "Finnnnn!"
+            saveRecordToUserDefaults(record: Record(point: count, name: name), forKey: currentMode.name)
         } else {
             self.answers = []
             self.currentQuestion = self.questions[queCnt]
@@ -107,3 +115,96 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
+struct Record: Codable {
+    var point: Int
+    var name: String
+    
+    init(point: Int, name: String) {
+        self.name = name
+        self.point = point
+    }
+}
+
+class RecordManager: NSObject {
+    
+    @objc static let shared = RecordManager()
+    
+    override init() {
+    }
+    private let hard = "hard"
+    private let medium = "medium"
+    private let easy = "easy"
+    var easyData: [Record] {
+        set(value) {
+            let jsonEncoder = JSONEncoder()
+            guard let data = try? jsonEncoder.encode(value) else {
+                return
+            }
+            UserDefaults.standard.set(data, forKey: easy)
+        }
+        get {
+            let jsonDecoder = JSONDecoder()
+            guard let data = UserDefaults.standard.data(forKey: easy),
+                  let recordData = try? jsonDecoder.decode([Record].self, from: data) else {
+                return []
+            }
+            return recordData
+        }
+    }
+    
+    var mediumData: [Record] {
+        set(value) {
+            let jsonEncoder = JSONEncoder()
+            guard let data = try? jsonEncoder.encode(value) else {
+                return
+            }
+            UserDefaults.standard.set(data, forKey: medium)
+        }
+        get {
+            let jsonDecoder = JSONDecoder()
+            guard let data = UserDefaults.standard.data(forKey: medium),
+                  let recordData = try? jsonDecoder.decode([Record].self, from: data) else {
+                return []
+            }
+            return recordData
+        }
+    }
+    
+    var hardData: [Record] {
+        set(value) {
+            let jsonEncoder = JSONEncoder()
+            guard let data = try? jsonEncoder.encode(value) else {
+                return
+            }
+            UserDefaults.standard.set(data, forKey: hard)
+        }
+        get {
+            let jsonDecoder = JSONDecoder()
+            guard let data = UserDefaults.standard.data(forKey: hard),
+                  let recordData = try? jsonDecoder.decode([Record].self, from: data) else {
+                return []
+            }
+            return recordData
+        }
+    }
+    
+    func getData(key: String) -> [Record] {
+        if key == hard {
+            return hardData
+        } else if key == medium {
+            return mediumData
+        } else {
+            return easyData
+        }
+    }
+    
+    func saveData(key: String, data: [Record]) {
+        if key == hard {
+            self.hardData = data
+        } else if key == medium {
+            self.mediumData = data
+        } else {
+            self.easyData = data
+        }
+    }
+}
